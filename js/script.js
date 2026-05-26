@@ -1,4 +1,4 @@
-// 🔹 Redirecionamento
+//  Redirecionamento
 function irParaEstados() {
     try {
         window.location.href = "index.html";
@@ -7,12 +7,12 @@ function irParaEstados() {
     }
 }
 
-// 🔹 Inicialização
+//  Inicialização
 document.addEventListener("DOMContentLoaded", inicializarSistema);
 
 function inicializarSistema() {
 
-    // 🔹 Elementos
+    //  Elementos
     const selectUF = document.getElementById("selecaoUF");
 
     const colunaA = document.getElementById("municipios1");
@@ -25,7 +25,7 @@ function inicializarSistema() {
 
     const colunas = [colunaA, colunaB, colunaC];
 
-    // 🔹 Carregar estados
+    //  Carregar estados
     async function carregarEstados() {
         try {
             const resp = await fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados");
@@ -52,7 +52,7 @@ function inicializarSistema() {
         }
     }
 
-    // 🔹 Carregar municípios
+    // Carregar municípios
     async function carregarMunicipios(siglaUF, nomeUF) {
         try {
             const resp = await fetch(
@@ -88,7 +88,7 @@ function inicializarSistema() {
         }
     }
 
-    // 🔹 Evento principal
+    //  Evento principal
     selectUF.addEventListener("change", (e) => {
 
         const option = e.target.selectedOptions[0];
@@ -97,7 +97,7 @@ function inicializarSistema() {
         const nome = option.dataset.nome;
         const id = option.dataset.id;
 
-        // 🔥 KPIs
+        
         kpiUF.textContent = nome ? `${nome} (${sigla})` : "Nenhuma";
         kpiId.textContent = id || "-";
 
@@ -106,6 +106,6 @@ function inicializarSistema() {
         }
     });
 
-    // 🔹 Start
+    //  Start
     carregarEstados();
 }
