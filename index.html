@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.N.G.E.L.I.C.A - Painel Territorial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header fixo -->
+    <header class="header">
+        <div class="logo-area">
+            <div class="logo-placeholder">
+                 <img src="assets/Logo.png" alt="Logo EngNet" class="logo-img ">
+            </div>
+            <div class="title-area">
+                <h1>A.N.G.E.L.I.C.A</h1>
+                <p>Agência Nacional de Gerenciamento de Estados</p>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Container principal -->
+    <main class="main-container">
+        <div class="dashboard-wrapper">
+            
+            <!-- SEÇÃO 1: CARDS DE KPI -->
+            <section class="kpi-section">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <span class="kpi-icon"></span>
+                        <div class="kpi-info">
+                            <h2 class="kpi-label">Total de Municípios</h2>
+                            <span class="kpi-value" id="totalMunicipiosUF">0</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-icon"></span>
+                        <div class="kpi-info">
+                            <h2 class="kpi-label">UF Selecionada</h2>
+                            <span class="kpi-value" id="ufSelecionada">Nenhuma</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-icon"></span>
+                        <div class="kpi-info">
+                            <h2 class="kpi-label">ID da UF</h2>
+                            <span class="kpi-value" id="idUf">-</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+           
+
+             
+
+            <!-- SEÇÃO 4: SELECIONE UMA UF (CENTRALIZADA) -->
+            <section class="selecao-uf-section">
+              
+            </div>
+                <div class="selecao-uf-container">
+                    <div class="selecao-uf-header">
+                        <div class="engnet-wrapper">
+
+                <div class="engnet-header-bar">
+
+                <div class="engnet-header-bar__logo">
+                    <img src="assets/Logo.png" alt="Logo EngNet" class="engnet-header-bar__logo img ">
+                </div>
+
+                <div class="engnet-header-bar__text">
+                    Plataforma de localidades da EngNet
+                </div>
+
+                </div>
+
+            </div>
+                        <h2> Selecione uma UF</h2>
+                        
+                    </div>
+                    <div class="selecao-uf-wrapper ">
+                        <select id="selecaoUF" >
+                            
+                            <option value="" >  </option>
+                        </select>
+                    </div>
+                    
+                    <section class="municipios-tabela">
+                        <div class="municipios-coluna" id="municipios1">
+                            <div class="coluna-header"> </div>
+                            <div class="municipios-lista"></div>
+                        </div>
+                        <div class="municipios-coluna" id="municipios2">
+                            <div class="coluna-header"></div>
+                            <div class="municipios-lista"></div>
+                        </div>
+                        <div class="municipios-coluna" id="municipios3">
+                            <div class="coluna-header"></div>
+                            <div class="municipios-lista"></div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
